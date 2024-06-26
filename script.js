@@ -1,25 +1,25 @@
-// Initialize EmailJS with your user ID
+
 (function() {
-  emailjs.init("Gvu3f2O--F1lmsHNL");
+  emailjs.init("YOUR CLIENT ID");
 })();
 
 document.addEventListener('DOMContentLoaded', function() {
-  // ... other code ...
+ 
 
-  // Form submission with EmailJS
+ 
   const contactForm = document.getElementById('contact-form');
   const successMessage = document.getElementById('success-message');
 
   contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
 
-      // Get form values
+    
       const name = document.getElementById('name').value;
       const email = document.getElementById('email').value;
       const message = document.getElementById('message').value;
 
-      // Send email using EmailJS
-      emailjs.send("service_0crihzk", "template_lgd1t9e", {
+     
+      emailjs.send("YOUR SERVICE ID", "YOUR TEMPLATE ID", {
           from_name: name,
           from_email: email,
           message: message
@@ -37,5 +37,5 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   });
 
-  // ... rest of your code ...
+  
 });
